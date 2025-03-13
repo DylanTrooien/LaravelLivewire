@@ -1,0 +1,14 @@
+services:
+  nginx:
+    container_name: nginx
+    build: .
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - '80:80'
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge

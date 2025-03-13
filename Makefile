@@ -1,8 +1,8 @@
-# Build Docker
+# Build Docker image
 build:
 	docker-compose build
 
-# Spin up containers
+# Spin up container
 up:
 	docker-compose up -d
 
@@ -12,7 +12,7 @@ down:
 
 # Open a shell to the Nginx container
 shell:
-	docker exec --workdir /var/www/html/npi-api -it nginx /bin/sh
+	docker exec --workdir /var/www/html -it nginx /bin/sh
 
 # Run Composer
 composer:
